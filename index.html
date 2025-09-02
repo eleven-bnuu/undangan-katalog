@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Katalog</title>
+  <link rel="icon" type="image/png" href="./img/favicon.png">
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#d4dfe1;
+      min-height:100vh;
+    }
+
+    /* --- WRAPPER FLEXBOX --- */
+    .wrap{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:16px;
+      max-width:1200px;
+      margin:20px auto;
+      padding:10px;
+    }
+
+    /* --- CARD --- */
+    .card{
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,.15);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      flex: 1 1 calc(50% - 20px); /* default 2 kolom */
+      max-width:300px;            /* batasi biar ga terlalu besar */
+    }
+
+    .thumb{
+      position:relative;
+      aspect-ratio:16/12;
+      background:#f5f5f5;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .chip{
+      position:absolute;
+      top:10px;left:10px;
+      background:#eee;
+      padding:4px 8px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:bold;
+    }
+
+    .body{
+      padding:14px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .title{ font-weight:bold; }
+    .price{ font-size:18px; font-weight:bold; }
+    .btn{
+      margin-top:8px;
+      background:#03294d;
+      border:none;
+      padding:10px;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:bold;
+      color: #fff;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (min-width:768px){
+      .card{ flex:1 1 calc(33.3% - 20px);} /* tablet 3 kolom */
+    }
+    @media (min-width:1024px){
+      .card{ flex:1 1 calc(25% - 20px);}   /* desktop 4 kolom */
+    }
+    
+    .site-header {
+  background: #03294d;      /* warna utama */
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;  /* tengah */
+  align-items: center;
+  position: sticky;         /* biar ikut scroll */
+  top: 0;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.logo {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%; /* kalau mau bulet */
+}
+
+.site-footer {
+  background:#03294d;
+  color:#fff;
+  padding:20px;
+  text-align:center;
+  margin-top:40px;
+}
+.site-footer .social {
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  gap:16px;
+}
+.site-footer a {
+  display:inline-flex;
+  transition: transform 0.2s ease;
+}
+.site-footer a:hover {
+  transform: scale(1.2);
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+  <div class="brand">
+    <span class="brand-name">PARTYSIFRIEND</span>
+  </div>
+</header>
+  <section id="v1">
+    <main class="wrap">
+    <!-- CARD 1 -->
+    <article class="card">
+      <div class="thumb">
+        <img src="./img/v1-01.jpg" alt="">
+        <span class="chip">v1-01</span>
+      </div>
+      <div class="body">
+        <div class="title">DEMO V1-1</div>
+        <div class="price">Rp 49.000,-</div>
+        <a href="https://demo-v1-01.vercel.app/?to=Nama%20Penerima">
+        <button class="btn">Lihat Contoh Tema</button>
+        </a>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card">
+      <div class="thumb">
+        <img src="./img/v1-02.jpg" alt="">
+        <span class="chip">v1-02</span>
+      </div>
+      <div class="body">
+        <div class="title">DEMO V1-02</div>
+        <div class="price">Rp 49.000,-</div>
+        <a href="https://demo-v1-02.vercel.app/?to=Nama%20Penerima">
+        <button class="btn">Lihat Contoh Tema</button>
+        </a>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card">
+      <div class="thumb">
+        <img src="./img/v1-03.jpg" alt="">
+        <span class="chip">v1-03</span>
+      </div>
+      <div class="body">
+        <div class="title">DEMO V1-03</div>
+        <div class="price">Rp 49.000,-</div>
+        <a href="https://demo-v1-03.vercel.app/?to=Nama%20Penerima">
+        <button class="btn">Lihat Contoh Tema</button>
+        </a>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card">
+      <div class="thumb">
+        <img src="./img/v1-04.jpg" alt="">
+        <span class="chip">v1-04</span>
+      </div>
+      <div class="body">
+        <div class="title">DEMO v1-04</div>
+        <div class="price">Rp 49.000,-</div>
+        <a href="https://demo-v1-04.vercel.app/?to=Nama%20Penerima">
+        <button class="btn">Lihat Contoh Tema</button>
+        </a>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="card">
+      <div class="thumb">
+        <img src="./img/v1-05.jpg" alt="">
+        <span class="chip">v1-05</span>
+      </div>
+      <div class="body">
+        <div class="title">DEMO-V1-05</div>
+        <div class="price">Rp 49.000,-</div>
+        <a href="https://demo-v1-05.vercel.app/?to=Nama%20Pemerima">
+        <button class="btn">Lihat Contoh Tema</button>
+        </a>
+      </div>
+    </article>
+  </main>
+  </section>
+  <footer class="site-footer">
+  <p>© 2025 partysifriend</p>
+  <div class="social">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/6285185048199" target="_blank" aria-label="WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ffffff" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163a11.9 11.9 0 01-1.62-5.95C.122 5.355 5.477 0 12.061 0c3.2 0 6.209 1.248 8.477 3.515a11.9 11.9 0 013.497 8.453c-.003 6.584-5.358 11.939-11.942 11.939a11.95 11.95 0 01-5.95-1.617L.057 24zm6.597-3.807c1.742 1.037 3.31 1.664 5.392 1.665 5.448 0 9.886-4.434 9.889-9.884.002-5.462-4.415-9.89-9.881-9.892-5.451 0-9.885 4.433-9.888 9.883a9.86 9.86 0 001.659 5.426l-.999 3.648 3.828-1.846zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.668.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.372-.025-.521-.074-.149-.668-1.61-.916-2.206-.242-.579-.487-.5-.668-.51l-.57-.01c-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.227 1.36.195 1.872.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.289.173-1.412z"/>
+      </svg>
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
